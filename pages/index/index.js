@@ -1,4 +1,5 @@
 // pages/index/index.js
+const app = getApp();
 Page({
 
   /**
@@ -20,5 +21,9 @@ Page({
     this.setData({
       count: this.data.count +1
     })
+  },
+  handleUserInfo(event){
+    app.globalData.nickName = event.detail.userInfo.nickName
+    console.log(app.globalData.nickName)
   }
 })

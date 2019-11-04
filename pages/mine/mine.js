@@ -1,4 +1,4 @@
-// pages/log/log.js
+// pages/mine/mine.js
 Page({
 
   /**
@@ -7,12 +7,21 @@ Page({
   data: {
 
   },
-
+  /**
+   * 用户登录
+   */
+  handleUserInfo(event){
+    console.log(event)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.getUserInfo({
+      success: function(res){
+        console.log(res)
+      }
+    })
   },
 
   /**

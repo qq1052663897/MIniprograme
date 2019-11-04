@@ -1,6 +1,9 @@
 <!--pages/index/index.wxml-->
+<open-data type="userNickName"></open-data>
 <view class="title">Hello {{name}}</view>
+<open-data type="userAvatarUrl"></open-data>
 <view>原来你{{age}}岁啦</view>
 <view wx:for="{{list}}">{{index}}). 哇,{{item.age}}岁的{{item.name}}是你的老婆啊!</view>
 <view>亲了 {{count}} 口</view>
 <button size="mini" bindtap="clickToUp">亲一口~</button>
+<button open-type="getUserInfo" bindgetuserinfo="handleUserInfo">点我登录</button>
